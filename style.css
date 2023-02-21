@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    height: 100vh;
+    background-color: rgb(203, 215, 215);
+}
+.container{
+    width: 40vw;  /*80*/
+    background-image: url('BackgroundIMG.jpg');
+    background-size: cover;
+    box-shadow: 5px 0px 20px 0px;
+    border-radius: 10px;
+}
+.curDate{
+    display: flex;
+    justify-content:space-around;
+    padding: 25px 0px;
+}
+.curDate #date{
+    font-size: 1.55rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0px;
+}
+.container .curDate span{
+    padding: 8px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s;
+}
+.container .curDate span:hover{
+    background-color: rgb(141, 174, 215);
+}
+.calender ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+}
+.calender .days{
+    padding: 5px 0px;
+    background-color: rgb(173, 193, 217);
+    color: rgb(34, 33, 33);
+}
+.calender ul li{
+    width: calc(100% / 7);
+    padding: 15px 0px;
+    transition: all 0.5s;
+}
+.calender .dates li:hover{
+    background-color: rgb(135, 165, 199);
+}
+.calender .dates .inactive{
+    color: rgb(150, 144, 144);
+}
+.calender .dates .today{
+    background-color: cadetblue;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        width: 80vw;
+        /* height: 68vh;  */
+    }
+  }
